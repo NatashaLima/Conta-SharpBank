@@ -1,25 +1,31 @@
-import logo from './logo.svg';
+import React from 'react';
+import Balance from './Components/Balance/Balance';
+import TransactionHistory from './Components/TransactionHistory/TransactionHistory';
+import ServicesButtons from './Components/ServicesButtons/ServicesButtons';
+import Menu from './Components/MenuButton/MenuButton';
+import User from './Components/User/User';
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  return (  
+    <div className="content-container">  
+      <div className="user-container">
+        <User />
+      </div>
+      <div className="balance-container">
+        <Balance />
+      </div>
+      <div className="services-container">
+        <ServicesButtons />
+      </div>
+      <div className="history-container">
+        <TransactionHistory />             
+      </div>
+      <div className="menu-container">
+        <Menu />
+      </div> 
+    </div>            
   );
 }
-
 export default App;
